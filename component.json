@@ -1,0 +1,8 @@
+{
+	"dependencies" : {
+		"backbone" : null,
+		"normalize-css" : null,
+		"google-code-prettify" : null
+	}
+
+}

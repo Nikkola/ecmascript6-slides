@@ -1,0 +1,56 @@
+<script language="javascript" type="application/javascript;version=1.8.6">
+
+
+//Модули.Определение
+module UniverseTest {};
+
+module UniverseTest { module MilkyWay {} };
+
+module MilkyWay = 'Universe/MilkyWay';
+
+module SolarSystem = Universe.MilkyWay.SolarSystem;
+
+module MySystem = SolarSystem;
+
+
+//Модули.Экспорт
+module Car {
+	//приватные
+	var licensePlateNo = '556-434';
+
+	//публичные
+	export function drive(speed,direction) {
+		console.log('details:', speed, direction);
+	}
+
+	export module engine{
+		export function check() {}
+	}
+
+	export var miles = 5000;
+	export var color = 'silver';
+}
+
+
+//Moдули.Импорт
+import drive from Car;
+import {drive, miles} from Car;
+
+import Math.{sum, pi}; 
+alert("2π = " + sum(pi, pi));
+
+//Можно использовать *, чтобы импортировать всё:
+import Math.*; 
+alert("2π = " + sum(pi, pi));
+
+
+
+//Модули.Загрузчик модулей 
+//смерть AMD, Requare.js, YeapNope.js итд
+Loader.load('car.js', function(car) {
+	console.log(car.drive(500, 'north'));
+}, function(err) {
+	console.log('Error:' + err);
+});
+
+</script>

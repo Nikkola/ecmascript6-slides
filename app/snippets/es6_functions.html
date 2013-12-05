@@ -1,0 +1,56 @@
+<script language="javascript" type="application/javascript;version=1.8.6">
+
+//1) arrow func
+[1,3,15,5,6].find(function(item) {
+	return item / 3 === 5;
+});
+
+//то же, что и
+[1,3,15,5,6].find(item => item / 3 === 5);
+
+//Arrow-функции немного отличаются от обычных функций. 
+//В первую очередь тем, что в arrow-функциях this 
+//привязан к вышестоящему контексту. Т.е.
+let jane = {
+   name: "Jane",
+        
+   sayHello: function (friends) {
+      friends.forEach(friend => { 
+      	console.log(this.name + " says hello to " + friend) 
+      });
+   }
+}
+
+jane.sayHello([ 'Mark', 'John' ]);
+
+
+//Другие отличия arrow-функций от обычных функций:
+//- Нельзя использовать arrow-функции как конструкторы (new (() => {}) - ошибка)
+//- Arrow-функции не могут обратиться к переменной arguments 
+
+//В остальном arrow-функции не отличаются от обычных функций. 
+//Они поддерживают переменное количество параметров, 
+//операторы typeof и instanceof:
+typeof () => {}; // 'function'
+() => {} instanceof Function; // true
+
+//2) параметры по умолчанию
+function setLevel(newLevel = 0, me = this) {
+   ...
+}
+
+setLevel(); // newLevel = 0
+setLevel(5); // newLevel = 5
+setLevel(undefined); // newLevel = 0
+
+
+//3) Именованные параметры функций - просто для улучшения читабельности кода.
+function foo({ from, to = 10 }) {
+   ...
+}
+
+foo({ from: 1, to: 5 });
+foo({ to: 5, from: 1 });
+foo({ from: 1 });
+
+</script>

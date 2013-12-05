@@ -1,0 +1,20 @@
+<script language="javascript" type="application/javascript;version=1.8.6">
+
+// Новый цикл for...of может работать только с массивами, сетами и мапами
+for (let word of ["one", "two", "three"]) {
+	alert(word);
+} 
+
+let s = new Set([3, 4, 5]);
+
+for (let value of s) {
+    alert(value)
+}
+
+let m = new Map([['red', 'rojo'], ['blue', 'azul']]);
+
+for (let [name, value] of m) {
+	alert(name + ' = ' + value);
+}
+
+</script>

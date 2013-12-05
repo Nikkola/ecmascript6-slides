@@ -1,0 +1,181 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  text-align: center;
+  color: white;
+  font-family: "Press Start 2P" italic;
+  background: -webkit-gradient(radial, 50%, 0, 50%, 100, color-stop(0%, #ffffff), color-stop(100%, #f6f6f6));
+  background: -webkit-radial-gradient(center, circle closest-corner, #ffffff 0%, #f6f6f6 100%);
+  background: -moz-radial-gradient(center, circle closest-corner, #ffffff 0%, #f6f6f6 100%);
+  background: -o-radial-gradient(center, circle closest-corner, #ffffff 0%, #f6f6f6 100%);
+  background: radial-gradient(center, circle closest-corner, #ffffff 0%, #f6f6f6 100%);
+}
+
+h1, h2, h3, h4, h5 {
+  margin-top: 0;
+}
+
+.hint-trigger {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 40px;
+}
+
+.hint {
+  position: absolute;
+  top: 10px;
+  left: 50px;
+  display: none;
+}
+
+.hint p {
+  text-align: left;
+  font-size: 47%;
+  color: black;
+}
+
+.hint p span {
+  color: red;
+}
+
+.hint img {
+  width: 80px;
+}
+
+.presentations {
+  display: table;
+  height: 100%;
+  width: 100%;
+}
+
+.presentation {
+  border: 10px solid #ffd400;
+  display: table-cell;
+  vertical-align: middle;
+  position: relative;
+  padding: 50px 200px;
+  font-size: 50px;
+}
+
+
+.presentation .author{
+  font-size: 16px;
+  color: #000;
+}
+
+.presentation img{
+  width: 40%;
+}
+
+.slides {
+  display: table;
+  height: 100%;
+  width: 100%;
+}
+
+.slide {
+  display: table-cell;
+  vertical-align: middle;
+  position: relative;
+  padding: 50px 200px;
+  font-size: 35px;
+}
+
+h1, .h1 {
+  color: #299a0b;
+  line-height: 1.3em;
+  letter-spacing: -1px;
+  margin-bottom: 0.5em;
+  font-size: 120%;
+}
+
+h1.x-large {
+  text-align: left;
+  font-size: 18px;
+}
+
+h1.large {
+  font-size: 30px;
+}
+
+h1.normal {
+  font-size: 100%;
+}
+
+.image img {
+  width: 70%;
+  max-width: 85%;
+  border: 1px solid #666666;
+  padding: 2px;
+}
+
+.bullets ul {
+  padding-left: 0;
+  color: #000;
+  font-size: 16px;
+}
+
+.bullets li {
+  text-align: left;
+  line-height: 1.6em;
+}
+
+.quote blockquote {
+  font-size: 40px;
+  display: inline-block;
+  color: #299a0b;
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+.quote blockquote::after,
+.quote blockquote::before {
+  content: '"';
+  font-weight: bold;
+  color: #666666;
+}
+
+.quote blockquote::before {
+  margin-left: -10px;
+}
+
+.quote cite {
+  font-size: 30px;
+  float: right;
+  font-weight: bold;
+  color: #666666;
+}
+
+.quote cite::before {
+  content: "- ";
+}
+
+.snippet pre.prettyprint {
+  text-align: left;
+  font-size: 18px;
+  font-family: monospace;
+  margin-top: 1em;
+  padding: 20px;
+  color: #232323;
+  max-height: 460px;
+  overflow-y: scroll;
+}
+
+.links {
+  font-size: 18px;
+}
+
+.link {
+  display: inline-block;
+  margin: 7px;
+}

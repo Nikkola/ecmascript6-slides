@@ -1,0 +1,23 @@
+<script language="javascript" type="application/javascript;version=1.8.6">
+
+//Константа
+const a = 10;
+
+a = 15; //error
+
+
+//let — это ключевое слово с помощью которого, мы 
+//можем определить переменную с ограниченной областью видимости
+var a = 1,
+	b = 0;
+
+if (true) {
+	let a = a * 10, // видна только внутри if
+		b = 5;
+
+	console.log(a + b); //15
+}
+
+console.log(a + b); //1		
+
+</script>

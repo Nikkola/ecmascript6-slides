@@ -1,0 +1,45 @@
+<script language="javascript" type="application/javascript;version=1.8.6">
+
+//Maps - хранилище данных
+ 
+let data = new Map();
+
+data.set('key', 'key'.length);
+data.get('key'); //3
+data.size(); //1
+data.has('key'); //true
+data.delete('key'); 
+data.has('key'); //false
+
+//Sets разница с maps - может содержать 
+//только уникальное значение
+//можно использовать для фильтрации значений
+let s = new Set([1,2,3]);
+
+s.has(5); //false
+s.add(5);
+s.has(5); //true
+s.delete(5); 
+s.has(5); //false
+
+
+
+//WeakMaps Объект, ключами которого могут быть объекты. 
+//ключ всегда должен быть определен
+//можно пихать элементы
+let wdata = new WeakMap();
+let element = document.querySelector('footer');
+
+wdata.set(element, 'some text');
+element = null
+wdata.has(element); //false
+ 
+let wmk = {};
+
+wdata.set(wmk, 'value');
+wdata.get(wmk); //'value'
+wdata.has(wmk); //true
+wdata.delete(wmk);
+wdata.has(wmk); //false
+
+</script>

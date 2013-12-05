@@ -1,0 +1,38 @@
+<script language="javascript" type="application/javascript;version=1.8.6">
+ 
+//1 метод сравнения двух объектов
+Object.is(NaN, NaN); //true
+Object.is(0, -0); //false
+
+//2 соединить два объекта
+Object.assign({a:1}, {b:2}); //{a:1, b:2}
+
+//3 примесь -это объект с набором функций, который сам по себе 
+//(отдельно от других объектов) не используется.
+var a  = {a:1}
+Object.mixin( a,{ b:2 } ); // {a: 1, b: 2}
+
+//4 можно передать специальную цепочку прототипа
+Object.setPrototypeOf(obj);  
+
+
+Object.observe(); //наблюдать за изменениями в объекте. 
+//обработчик срабатывает при изменении и передает туда изменение
+
+var tweet = {
+	text: '#loftblog conf',
+	username: 'nicky',
+	sent: false
+};
+
+Object.observe(tweet, function(changes) {
+	changes.forEach(function(change, i) {
+		console.log(change);
+	});
+});
+
+ 
+//5 получить массив всех имен свойств
+Object.getPropertyNames(obj);  
+
+</script>

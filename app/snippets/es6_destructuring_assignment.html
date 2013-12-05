@@ -1,0 +1,19 @@
+<script language="javascript" type="application/javascript;version=1.8.6">
+
+//«Разворачивает» объект или массив в последовательность переменных.
+//При этом при разворачивании объекта нужно указать только ключи, которые нужны.
+let { first: f, last: l } = { first: 'Jane', last: 'Doe' };
+console.log(f); // 'Jane'
+console.log(l); // 'Doe'
+
+//если в объекте-источнике присваивания соответствующего поля нету, 
+//то выбрасывается ошибка:
+let { first: f, last: l } = { first: 'Jane' };  // ошибка
+
+//Если же вы не хотите, чтобы ошибка генерировалась, 
+//то переменную можно объявить как irrefutable (неразворачиваемая) с помощью суффикса ?:
+let { first: f, last?: l } = { first: 'Jane' };  // ok
+console.log(l);  // undefined
+console.log( f ); // 'Jane'
+
+</script>

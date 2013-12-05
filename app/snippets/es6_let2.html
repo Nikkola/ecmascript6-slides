@@ -1,0 +1,30 @@
+<script language="javascript" type="application/javascript;version=1.8.6">
+
+//1 Область видимости для одного блока
+let(define vars){
+	some expression
+}
+
+//2 Область видимости для одного выражения
+let(pred = function(x)!(x%3))pred(4) 
+
+//3 Let внутри цикла for
+for(let i=0;i<list.length;i++){
+  Bob.buy(list[i]); //Bob купил вещь из списка
+}
+
+//4 Let внутри блока
+//Отличием от определения let для блока кода будет в том,
+//что здесь начав определять переменную она станет undefined 
+//и только когда мы присвоим ей значение он станет не undefined.
+
+let i=100
+{
+	let i = i * i
+	Bob.say(i) //получим NaN.
+}
+//так как когда мы написали let i - мы определили i 
+//внутри блока i пока что undefined и при умножении undefined 
+//на undefined мы получаем NaN
+
+</script>

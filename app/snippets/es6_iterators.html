@@ -1,0 +1,20 @@
+<script language="javascript" type="application/javascript;version=1.8.6">
+
+//Объект, который знает, в каком порядке нужно обходить его свойства, 
+//и хранит текущую позицию в обходе. Сводится к методу next.
+var lang = { name: 'JavaScript', birthYear: 1995 };
+var it = Iterator(lang);
+
+//однажды инициализированный, позволяет получить последовательный доступ
+//к парам ключ-значение объекта
+var pair = it.next(); // пара ["name", "JavaScript"]
+pair = it.next(); // пара ["birthYear", 1995]
+pair = it.next(); // Возбуждается исключение StopIteration
+
+// удобно использовать для обхода объекта
+var it = Iterator(lang);
+for (var pair in it) {
+ console.log(pair); // каждый раз выводит пару [key, value]
+}
+
+</script>
