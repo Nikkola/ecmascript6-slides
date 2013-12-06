@@ -1,4 +1,4 @@
-Simple JS Presentation Engine
+2013  December by Nick Chernobaev
+www.nickchernobaev.com 
 
-2013 by Nick Chernobaev
-www.nickchernobaev.com
+ecmascript6-slides 
